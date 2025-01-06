@@ -10,6 +10,9 @@ app.use(express.json());//express.json is a method inbuild in express to recogni
 //Request Object as a JSON Object. This method is called middleware
 app.use(studentRouter);
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the CRUD API");
+  });
 
 app.listen(port,()=>{
     console.log(`server running on ${port}`);

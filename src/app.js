@@ -12,7 +12,7 @@ app.use(express.json());//express.json is a method inbuild in express to recogni
 app.use(studentRouter);
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "../index.html"));
     // res.send("Welcome to the CRUD API");
   });
 

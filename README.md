@@ -1,6 +1,6 @@
 # CRUD-REST_API
 
-## **Overview**
+## Description
 
 This is a simple **CRUD REST API** built using **Node.js**, **Express.js**, and **MongoDB**. The API allows users to perform Create, Read, Update, and Delete operations on student data. It is a lightweight and scalable solution for managing student records.
 

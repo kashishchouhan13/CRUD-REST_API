@@ -8,7 +8,7 @@ const app=express();
 const port= process.env.PORT|| 4000;
 
 app.use(express.json());//express.json is a method inbuild in express to recognise the incoming 
-                        //Request Object as a JSON Object. This method is called middleware
+//Request Object as a JSON Object. This method is called middleware
 app.use(studentRouter);
 
 app.use(express.static(path.join(__dirname, "../")));

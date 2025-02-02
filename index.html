@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Student CRUD Operations</h1>
+
+        <!-- Buttons to switch between Add, Show, Update -->
+        <div id="buttons">
+            <button onclick="showAddData()">Add Data</button>
+            <button onclick="showShowData()">Show Data</button>
+            <button onclick="showUpdateData()">Update Data</button>
+        </div>
+
+        <!-- Add Data Section -->
+        <div id="addDataSection" class="section">
+            <h2>Add New Student</h2>
+            <input type="text" id="inputName" placeholder="Enter name" />
+            <input type="email" id="inputEmail" placeholder="Enter email" />
+            <input type="text" id="inputPhone" placeholder="Enter phone number" />
+            <input type="text" id="inputAddress" placeholder="Enter address" />
+            <button id="addButton">Add Student</button>
+        </div>
+
+        <!-- Show Data Section -->
+        <div id="showDataSection" class="section" style="display:none;">
+            <h2>Student List</h2>
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="dataList"></tbody>
+            </table>
+        </div>
+
+        <!-- Update Data Section -->
+        <div id="updateDataSection" class="section" style="display:none;">
+            <h2>Update Student</h2>
+            <select id="updateSelect" onchange="fetchUpdateData()">
+                <option value="">Select a student</option>
+            </select>
+            <input type="text" id="updateName" placeholder="Enter new name" />
+            <input type="email" id="updateEmail" placeholder="Enter new email" />
+            <input type="text" id="updatePhone" placeholder="Enter new phone number" />
+            <input type="text" id="updateAddress" placeholder="Enter new address" />
+            <button id="updateButton">Update Student</button>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
